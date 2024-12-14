@@ -12,7 +12,7 @@
 OEWN lacks collocation relations, i.e. relations of words + meanings on the
 syntagmatic axis.
 
-This brings collocations to OEWN as sense relations
+This brings __collocations__ to OEWN __as sense relations__
 (a relation between two words, each within a semantic context
 expressed by a synset)
 
@@ -40,5 +40,14 @@ Paper: [SyntagNet: Challenging Supervised Word Sense Disambiguation with Lexical
 
 ### Statistics
 
-174768 collocations were added (87384+87384 both ways)
+174768 collocations are added to OEWN (87384+87384, both ways),
 616 failed due to 239 senses being obsoleted or some flawed symmetrical source data.
+
+
+### Tools
+
+The *augment.py* script here adds collocations to the YAML files as sense relations. It does not have any dependency apart from PyYAML.
+
+[oewn-core](https://github.com/oewntk/oewn-core), a base python library for OEWN, has now a 
+[oewn-syntagnet](https://github.com/oewntk/oewn-core/tree/main/oewn_syntagnet) module
+that allows runtime injection of collocations into the OEWN model.
